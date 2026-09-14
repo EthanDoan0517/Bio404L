@@ -31,5 +31,14 @@
   },
   "reading-notes/index.qmd": {
     "index.html": "a6b59881"
+  },
+  "sra-fastqc-trim(1).qmd": {
+    "sra-fastqc-trim(1).html": "369bf421"
+  },
+  "guided-labs/sra-fastqc-trim.qmd": {
+    "sra-fastqc-trim.html": "8337057d"
+  },
+  "txpt-quantification.qmd": {
+    "txpt-quantification.html": "00fb0cd6"
   }
 }

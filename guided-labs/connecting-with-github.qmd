@@ -1,6 +1,6 @@
 ---
 title: "Working with GitHub"
-author: "Ethan Doan"
+author: "Your Name"
 date: 2026-08-31
 projects: "guided-learning"
 keywords:
@@ -67,7 +67,7 @@ and setup your lab notebook webpage!
 
 1. Download your empty lab reposity from GitHub (only need to do this the first day)
    ```bash
-   git clone https://github.com/EthanDoan0517/Bio404L.git
+   CODE GOES HERE
    ```
 2. Download the files from BlackBoard and put them into the empty repository on your computer
 
@@ -77,7 +77,7 @@ and setup your lab notebook webpage!
 
 5. Check if you have **local** updates that are not found in the **remote** repository
    ```bash
-   git status
+   CODE GOES HERE
    ```
 
 6. So many updates... Well GitHub has three big stages: adding changes, committing those changes
@@ -85,17 +85,17 @@ and setup your lab notebook webpage!
 
 7. Adding your changes to "stage" them to upload
    ```bash
-   git add .
+   CODE GOES HERE
    ```
 
 8. Committing those changes before pushing them!
    ```bash
-   git commit -m "MESSAGE"
+   CODE GOES HERE
    ```
 
 9. Pushing those changes
    ```bash
-   git push
+   CODE GOES HERE
    ```
 
    Please do **not** store your git-token here! This will be publicly available.
