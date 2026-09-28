@@ -287,7 +287,7 @@ transcript-level quantification files from `Salmon`
    - [ ] `metadata`
    - [ ] `results`
 
-7. Open a new terminal and move into `quant_data` folder
+7. Open a new **local** terminal and move into `quant_data` folder inside the `Guided_DGE_Analysis` folder
 
    ::: {.callout-tip title="In case you get stumped" collapse="true"}
    ```bash
