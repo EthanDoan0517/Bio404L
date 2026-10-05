@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Your Name">
+<meta name="author" content="Ethan Doan">
 <meta name="dcterms.date" content="2026-08-31">
 <meta name="keywords" content="github, website">
 
-<title>Working with GitHub – My lab notebook</title>
+<title>Working with GitHub – Ethan Doan’s Lab Notebook</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -121,7 +121,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">My lab notebook</span>
+    <span class="navbar-title">Ethan Doan’s Lab Notebook</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -201,7 +201,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Your Name </p>
+             <p>Ethan Doan </p>
           </div>
   </div>
     
@@ -229,7 +229,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="goals-of-the-lab-overall" class="level1">
 <h1>Goals of the lab overall</h1>
 <hr>
-<p>The skills acquired in this lab class are crucial for bioinformatic tasks using molecular data, such as data analysis, scripting, and working in high-performance computing (HPC) environments. My hope is that you don’t just type the commands into the terminal and move on – I would like you to <strong><em>think</em></strong> about what these commands are doing and start imagining how they could be useful in analyzing your own data.</p>
+<p>The skills acquired in this lab class are crucial for bioinformatic tasks using molecular data, such as data analysis, scripting, and working in high-performance computing (HPC) environments. My hope is that you donâ€™t just type the commands into the terminal and move on – I would like you to <strong><em>think</em></strong> about what these commands are doing and start imagining how they could be useful in analyzing your own data.</p>
 <section id="for-your-success-in-the-lab" class="level2">
 <h2 class="anchored" data-anchor-id="for-your-success-in-the-lab">For your success in the lab</h2>
 <p>Each lab is inteded to be a reference point for you on various bioinformatic tasks. To make the most of these labs, please treat them like a <strong>personal resource</strong>, so adjust any specific commands accordingly.</p>
@@ -249,9 +249,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>GitHub is a fantastic place to store and work with lots of code and so many website templates. Technically, this digital notebook is a website! You should share (or not) with your parents or favorite friends, animals, pets, rocks, plants. Show it off to someone you would like to impress (your bioinformatics prof?!) as <strong>you are going to do a great job and should be proud</strong>.</p>
 <p>GitHub Checklist:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">Make a GitHub Repository</label></li>
-<li><label><input type="checkbox">Set-up the lab notebook</label></li>
-<li><label><input type="checkbox">Save the notebook online as a website!</label></li>
+<li><label><input type="checkbox" checked="">Make a GitHub Repository</label></li>
+<li><label><input type="checkbox" checked="">Set-up the lab notebook</label></li>
+<li><label><input type="checkbox" checked="">Save the notebook online as a website!</label></li>
 <li><label><input type="checkbox">Update the lab notebook!</label></li>
 <li><label><input type="checkbox">Make a new post!</label></li>
 <li><label><input type="checkbox">“Push” the changes</label></li>
@@ -283,14 +283,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="setting-up-your-notebook-site" class="level2">
 <h2 class="anchored" data-anchor-id="setting-up-your-notebook-site">Setting up your notebook site!</h2>
-<p>Put your notes here!!!</p>
+<p>My repository is <code>EthanDoan0517/Bio404L</code>. In GitHub Settings → Pages, the site should publish from the <code>main</code> branch and <code>/docs</code> folder, matching <code>output-dir: docs</code> in <code>_quarto.yml</code>.</p>
+<p>The notebook URL is <a href="https://ethandoan0517.github.io/Bio404L/" class="uri">https://ethandoan0517.github.io/Bio404L/</a>. After editing <code>.qmd</code> files, I render the website, inspect the changed pages, then commit both the source and generated <code>docs</code> files.</p>
 <p>Wait for it to load … (so hard to do)</p>
 <p>Make sure to email your prof about your link!</p>
 </section>
 <section id="practing-with-github-and-editing" class="level2">
 <h2 class="anchored" data-anchor-id="practing-with-github-and-editing">Practing with GitHub and Editing!</h2>
 <p>Now, try and upload all your cool changes to GitHub!</p>
-<p>Put really good notes here!!!</p>
+<p>A new note needs a descriptive title, author (<code>Ethan Doan</code>), date, and project in its YAML header. I save weekly notes under <code>weekly-notes/</code> so that the listing can discover them.</p>
 <p>Remember the order is:</p>
 <ul>
 <li>Make new posts, edits, whatever you want</li>
@@ -303,7 +304,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="quick-reference" class="level1">
 <h1>Quick Reference</h1>
-<p>Make a small reference guide of steps for yourself down here!</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull <span class="at">--ff-only</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Edit the notebook .qmd files.</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Update lab notebook"</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Review the changes before committing. Open the published page after deployment to check the result.</p>
 
 
 </section>

@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="YOUR-NAME">
+<meta name="author" content="Ethan Doan">
 <meta name="dcterms.date" content="2026-09-09">
 <meta name="keywords" content="salmon, read-mapping, hpc">
 
-<title>Transcript Quantification – My lab notebook</title>
+<title>Transcript Quantification – Ethan Doan’s Lab Notebook</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -121,7 +121,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">My lab notebook</span>
+    <span class="navbar-title">Ethan Doan’s Lab Notebook</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -201,7 +201,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>YOUR-NAME </p>
+             <p>Ethan Doan </p>
           </div>
   </div>
     
@@ -228,7 +228,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="goals-of-the-lab-overall" class="level1">
 <h1>Goals of the lab overall</h1>
-<p>The skills acquired in this lab class are crucial for bioinformatic tasks using molecular data, such as data analysis, scripting, and working in high-performance computing (HPC) environments. My hope is that you don’t just type the commands into the terminal and move on – I would like you to <strong><em>think</em></strong> about what these commands are doing and start imagining how they could be useful in analyzing your own data.</p>
+<p>The skills acquired in this lab class are crucial for bioinformatic tasks using molecular data, such as data analysis, scripting, and working in high-performance computing (HPC) environments. My hope is that you donâ€™t just type the commands into the terminal and move on – I would like you to <strong><em>think</em></strong> about what these commands are doing and start imagining how they could be useful in analyzing your own data.</p>
 <section id="for-your-success-in-the-lab" class="level2">
 <h2 class="anchored" data-anchor-id="for-your-success-in-the-lab">For your success in the lab</h2>
 <p>Each lab is inteded to be a reference point for you on various bioinformatic tasks. To make the most of these labs, please treat them like a <strong>personal resource</strong>, so adjust any specific commands accordingly.</p>
@@ -439,12 +439,12 @@ Caution
 </div>
 <ol start="3" type="1">
 <li><p>For each of the sets of reads, it would be best to provide the <strong>full</strong> path to the trimmed reads in the script. Especially, as you should be working in your <code>transcript_quantification</code> folder, we do not have to any confusing navigation.</p>
-<p>In the code below are the <code>PATH</code>s to <strong><em>my</em></strong> files. You should update it accordingly!</p>
+<p>The paths below use my <code>scr10</code> directory on the HPC.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">salmon</span> quant <span class="dt">\</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">-i</span> dmel_index <span class="dt">\</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">-l</span> A <span class="dt">\</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">-1</span> /sciclone/scr10/xxmaureralcala/Biol404L/raw_read_prep/Dmel_Maine_21C_Rep1.Fwd.20q.80nt.fastq.gz <span class="dt">\</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">-2</span> /sciclone/scr10/xxmaureralcala/Biol404L/raw_read_prep/Dmel_Maine_21C_Rep1.Rev.20q.80nt.fastq.gz <span class="dt">\</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">-1</span> ~/scr10/Biol404L/raw_read_prep/Dmel_Maine_21C_Rep1.Fwd.20q.80nt.fastq.gz <span class="dt">\</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">-2</span> ~/scr10/Biol404L/raw_read_prep/Dmel_Maine_21C_Rep1.Rev.20q.80nt.fastq.gz <span class="dt">\</span></span>
 <span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">-p</span> 8 <span class="dt">\</span></span>
 <span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">-o</span> Salmon_Quant/Dmel_Maine_21C_Rep1_Quant</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>You can see that I added the sample information to the <code>-o</code> to make it clear which set of trimmed reads were being processed.</p></li>
@@ -464,9 +464,9 @@ Caution
 <li><p>You should see the <code>Guided_DGE_Analysis</code> on your <code>Desktop</code></p></li>
 <li><p>Inside that folder, make the following new folders</p>
 <ul class="task-list">
-<li><label><input type="checkbox"><code>quant_data</code></label></li>
-<li><label><input type="checkbox"><code>metadata</code></label></li>
-<li><label><input type="checkbox"><code>results</code></label></li>
+<li><label><input type="checkbox" checked=""><code>quant_data</code></label></li>
+<li><label><input type="checkbox" checked=""><code>metadata</code></label></li>
+<li><label><input type="checkbox" checked=""><code>results</code></label></li>
 </ul></li>
 <li><p>Open a new <strong>local</strong> terminal and move into <code>quant_data</code> folder inside the <code>Guided_DGE_Analysis</code> folder</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="In case you get stumped">

@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="YOUR-NAME">
+<meta name="author" content="Ethan Doan">
 <meta name="dcterms.date" content="2026-09-09">
 <meta name="keywords" content="sra, fastq, trimming, downloading, hpc">
 
-<title>Working with SRA Data – My lab notebook</title>
+<title>Working with SRA Data – Ethan Doan’s Lab Notebook</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -121,7 +121,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">My lab notebook</span>
+    <span class="navbar-title">Ethan Doan’s Lab Notebook</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -204,7 +204,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>YOUR-NAME </p>
+             <p>Ethan Doan </p>
           </div>
   </div>
     
@@ -231,7 +231,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="goals-of-the-lab-overall" class="level1">
 <h1>Goals of the lab overall</h1>
-<p>The skills acquired in this lab class are crucial for bioinformatic tasks using molecular data, such as data analysis, scripting, and working in high-performance computing (HPC) environments. My hope is that you don’t just type the commands into the terminal and move on – I would like you to <strong><em>think</em></strong> about what these commands are doing and start imagining how they could be useful in analyzing your own data.</p>
+<p>The skills acquired in this lab class are crucial for bioinformatic tasks using molecular data, such as data analysis, scripting, and working in high-performance computing (HPC) environments. My hope is that you donâ€™t just type the commands into the terminal and move on – I would like you to <strong><em>think</em></strong> about what these commands are doing and start imagining how they could be useful in analyzing your own data.</p>
 <section id="for-your-success-in-the-lab" class="level2">
 <h2 class="anchored" data-anchor-id="for-your-success-in-the-lab">For your success in the lab</h2>
 <p>Each lab is inteded to be a reference point for you on various bioinformatic tasks. To make the most of these labs, please treat them like a <strong>personal resource</strong>, so adjust any specific commands accordingly.</p>
@@ -267,7 +267,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>We are going to first access the HPC again, as you did in our first lab. Refer to your notes as needed!</p>
 <ol type="1">
 <li><p>Download your empty lab reposity from GitHub (only need to do this the first day)</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> wm-username@bora.sciclone.wm.edu</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> etdoan@bora.sciclone.wm.edu</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>Move into your lab folder (this should be in the <code>scr10</code> directory)</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/scr10/Biol404L</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>Make a new directory called <code>raw_read_prep</code> if you have not already!</p>
@@ -610,7 +610,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove this sample's intermediates only after verifying trimmed outputs.</span></span>
 <span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-ri</span> SRR1576457 Dmel_Maine_21C_Rep1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ol>
-<p>Make a small reference guide of steps for yourself down here!</p>
+<p>My processing order is <code>prefetch</code> → <code>parallel-fastq-dump</code> → <code>fastp</code> → inspect the QC report → Salmon quantification. Match every accession to <code>DGE.Drosophila.Metadata.csv</code>. A finished job alone is insufficient: check nonempty paired outputs, retained-read counts, and logs before removing intermediates.</p>
+<p>The current per-sample results and unresolved Panama runs are recorded in the <a href="../weekly-notes/lab-completion-audit.html">completion audit</a>.</p>
 
 
 </section>

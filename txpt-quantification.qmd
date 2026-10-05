@@ -1,6 +1,6 @@
 ---
 title: "Transcript Quantification"
-author: "YOUR-NAME"
+author: "Ethan Doan"
 date: 2026-09-09
 projects: "guided-learning"
 keywords:
@@ -12,7 +12,7 @@ keywords:
 # Goals of the lab overall
 
 The skills acquired in this lab class are crucial for bioinformatic tasks using molecular data, such as data analysis, scripting,
-and working in high-performance computing (HPC) environments. My hope is that you don’t just type the commands into the terminal and
+and working in high-performance computing (HPC) environments. My hope is that you donâ€™t just type the commands into the terminal and
 move on -- I would like you to ***think*** about what these commands are doing and start imagining how they could be useful in analyzing your own data.
 
 ## For your success in the lab
@@ -245,13 +245,13 @@ and update these files repeatedly will help it become more familiar and easy to 
 the trimmed reads in the script. Especially, as you should be working in your
 `transcript_quantification` folder, we do not have to any confusing navigation.
 
-   In the code below are the `PATH`s to ***my*** files. You should update it accordingly!
+   The paths below use my `scr10` directory on the HPC.
    ```bash
    salmon quant \
         -i dmel_index \
         -l A \
-        -1 /sciclone/scr10/xxmaureralcala/Biol404L/raw_read_prep/Dmel_Maine_21C_Rep1.Fwd.20q.80nt.fastq.gz \
-        -2 /sciclone/scr10/xxmaureralcala/Biol404L/raw_read_prep/Dmel_Maine_21C_Rep1.Rev.20q.80nt.fastq.gz \
+        -1 ~/scr10/Biol404L/raw_read_prep/Dmel_Maine_21C_Rep1.Fwd.20q.80nt.fastq.gz \
+        -2 ~/scr10/Biol404L/raw_read_prep/Dmel_Maine_21C_Rep1.Rev.20q.80nt.fastq.gz \
         -p 8 \
         -o Salmon_Quant/Dmel_Maine_21C_Rep1_Quant
    ```
@@ -283,9 +283,9 @@ transcript-level quantification files from `Salmon`
 5. You should see the `Guided_DGE_Analysis` on your `Desktop`
 
 6. Inside that folder, make the following new folders
-   - [ ] `quant_data`
-   - [ ] `metadata`
-   - [ ] `results`
+   - [x] `quant_data`
+   - [x] `metadata`
+   - [x] `results`
 
 7. Open a new terminal and move into `quant_data` folder
 

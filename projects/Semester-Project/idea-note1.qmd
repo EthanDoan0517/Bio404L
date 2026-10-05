@@ -6,13 +6,12 @@ projects: Semester-Project
 
 ## Thoughts about project
 
-Great place to brainstorm next steps and keep track of what you may want to test
-or explore more!
+No personal project hypothesis or dataset choice was recorded in this entry.
 
 ### Possible next steps
 <!-- example header above -->
 
-Tasks you may want to be able to tackle!
+Next steps: choose a dataset, record a research question, and identify the analysis and outputs needed to answer it.
 
 - [ ] Make a new post
 - [ ] Make edits to an existing note

@@ -1,0 +1,58 @@
+---
+title: "Four guided labs: completion audit"
+author: "Ethan Doan"
+date: 2026-10-05
+projects: "guided-learning"
+---
+
+## Scope and evidence
+
+This audit covers the four guided-lab pages currently in the notebook. It is a retrospective check of saved files, not a claim that every lab was completed. Local QC reports and Salmon outputs were checked on October 5, 2026. HPC authentication failed during this check, so the current remote files, environments, scripts, and jobs remain unverified.
+
+| Guided lab | Evidence and remaining work |
+|---|---|
+| Working with GitHub | Repository and rendered notebook exist. Personal details and notes have been updated; publication is checked separately. |
+| Accessing W&M's HPC | Existing local analysis outputs support prior processing, but current HPC access, the `sra_prep` and `txpt_quant` environments, installed tools, and SLURM scripts need remote verification. |
+| Working with SRA Data | Six Maine QC reports retain reads. Two Panama reports retain zero reads; four Panama reports were not found locally. Check remote results and diagnose unsuccessful runs. |
+| Transcript Quantification | Six Maine `quant.sf` tables pass local structural/numerical checks. Six Panama tables were not found locally. All 12 successful sample outputs are needed to establish completion. |
+
+## Sample products found locally
+
+QC reports were read from `Documents/W&M Junior Year/Lab`; quantification files were read from `Desktop/Guided_DGE_Analysis/quant_data`. Missing locally does not prove missing on the HPC.
+
+| Sample | SRA accession | Reads retained in local QC report | Local Salmon result |
+|---|---|---|---|
+| Dmel_Maine_21C_Rep1 | SRR1576457 | 46.090714 M | Valid; 90.35% mapped |
+| Dmel_Maine_21C_Rep2 | SRR1576458 | 35.507118 M | Valid; 89.91% mapped |
+| Dmel_Maine_21C_Rep3 | SRR1576459 | 48.257202 M | Valid; 88.98% mapped |
+| Dmel_Maine_29C_Rep1 | SRR1576460 | 45.324140 M | Valid; 91.38% mapped |
+| Dmel_Maine_29C_Rep2 | SRR1576461 | 43.892302 M | Valid; 89.52% mapped |
+| Dmel_Maine_29C_Rep3 | SRR1576462 | 48.323142 M | Valid; 90.40% mapped |
+| Dmel_Panama_21C_Rep1 | SRR1576463 | No local report | Not found locally |
+| Dmel_Panama_21C_Rep2 | SRR1576464 | No local report | Not found locally |
+| Dmel_Panama_21C_Rep3 | SRR1576465 | No local report | Not found locally |
+| Dmel_Panama_29C_Rep1 | SRR1576514 | 0 | Not found locally |
+| Dmel_Panama_29C_Rep2 | SRR1576515 | 0 | Not found locally |
+| Dmel_Panama_29C_Rep3 | SRR1576516 | No local report | Not found locally |
+
+Each of the six valid Maine tables contains 29,926 transcripts, nonnegative finite TPM/count values, and TPMs summing to approximately one million. Their Salmon metadata report completed processing without quantification errors. The run timestamps are September 21, 2026. These checks establish valid saved outputs, not the biological interpretation of the experiment.
+
+The local DGE project contains `quant_data`, `metadata`, and `results` directories and a metadata CSV.
+
+## Panama processing problems identified
+
+The saved `Dmel_Panama_29C_Rep1.html` report names input accession `SRR1576466`; the metadata requires `SRR1576514`. The Rep2 report names `SRR1576467`; the metadata requires `SRR1576515`. Thus, those filenames do not establish that the required samples were processed.
+
+Both reports show mean input read lengths of 76 bases and a command using `fastp -l 80`. More than 99.8% of reads were rejected as too short, with zero reads retained. Before rerunning, verify the correct accessions and their read lengths against the course metadata. Changing the length cutoff alone would not resolve the sample mismatch.
+
+## HPC completion criteria
+
+- [ ] Authenticate as `etdoan` and inspect `~/scr10/Biol404L`.
+- [ ] Verify `sra_prep` has the required SRA tools, `parallel-fastq-dump`, `fastp`, and NCBI datasets CLI.
+- [ ] Verify `txpt_quant` has Salmon and STAR.
+- [ ] Inspect the download, unpacking, trimming, indexing, and quantification scripts and job logs.
+- [ ] Verify usable trimmed read pairs and QC reports for all 12 accessions; investigate zero-retained-read Panama reports before changing any thresholds.
+- [ ] Verify the Salmon index and all 12 successful quantification directories on the HPC.
+- [ ] Compare saved local products with HPC products and copy any genuinely missing completed outputs.
+
+Expected remote locations are `~/scr10/Biol404L/raw_read_prep`, `~/scr10/Biol404L/transcript_quantification/Salmon_Quant`, and `~/scr10/Biol404L/Slurm_Scripts`; these are notebook conventions and still require live verification.

@@ -1,6 +1,6 @@
 ---
 title: "Working with GitHub"
-author: "Your Name"
+author: "Ethan Doan"
 date: 2026-08-31
 projects: "guided-learning"
 keywords:
@@ -13,7 +13,7 @@ keywords:
 ---
 
 The skills acquired in this lab class are crucial for bioinformatic tasks using molecular data, such as data analysis, scripting,
-and working in high-performance computing (HPC) environments. My hope is that you don’t just type the commands into the terminal and
+and working in high-performance computing (HPC) environments. My hope is that you donâ€™t just type the commands into the terminal and
 move on -- I would like you to ***think*** about what these commands are doing and start imagining how they could be useful in analyzing your own data.
 
 
@@ -50,9 +50,9 @@ impress (your bioinformatics prof?!) as **you are going to do a great job and sh
 
 GitHub Checklist:
 
-- [ ] Make a GitHub Repository
-- [ ] Set-up the lab notebook
-- [ ] Save the notebook online as a website!
+- [x] Make a GitHub Repository
+- [x] Set-up the lab notebook
+- [x] Save the notebook online as a website!
 - [ ] Update the lab notebook!
 - [ ] Make a new post!
 - [ ] "Push" the changes
@@ -107,7 +107,9 @@ and setup your lab notebook webpage!
 
 ## Setting up your notebook site!
 
-Put your notes here!!!
+My repository is `EthanDoan0517/Bio404L`. In GitHub Settings → Pages, the site should publish from the `main` branch and `/docs` folder, matching `output-dir: docs` in `_quarto.yml`.
+
+The notebook URL is <https://ethandoan0517.github.io/Bio404L/>. After editing `.qmd` files, I render the website, inspect the changed pages, then commit both the source and generated `docs` files.
 
 Wait for it to load ... (so hard to do)
 
@@ -118,7 +120,7 @@ Make sure to email your prof about your link!
 
 Now, try and upload all your cool changes to GitHub!
 
-Put really good notes here!!!
+A new note needs a descriptive title, author (`Ethan Doan`), date, and project in its YAML header. I save weekly notes under `weekly-notes/` so that the listing can discover them.
 
 Remember the order is:
 
@@ -130,4 +132,14 @@ Remember the order is:
 
 # Quick Reference
 
-Make a small reference guide of steps for yourself down here!
+```bash
+git pull --ff-only
+# Edit the notebook .qmd files.
+quarto render
+git status
+git add .
+git commit -m "Update lab notebook"
+git push origin main
+```
+
+Review the changes before committing. Open the published page after deployment to check the result.

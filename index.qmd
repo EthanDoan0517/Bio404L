@@ -1,7 +1,15 @@
 ---
-title: "YOUR-NAME'S Lab Notebook"
+title: "Ethan Doan's Lab Notebook"
 format: html
 ---
+# Ethan Doan — BIO404L
+
+This notebook documents my Introduction to Bioinformatics Lab work for Fall 2026.
+My GitHub repository is [EthanDoan0517/Bio404L](https://github.com/EthanDoan0517/Bio404L).
+My HPC account is `etdoan@bora.sciclone.wm.edu`; course work belongs in `~/scr10/Biol404L`.
+
+See the [four-lab completion audit](weekly-notes/lab-completion-audit.qmd) for verified results and remaining work.
+
 # Using the lab notebook
 
 The goal for this repository/notebook is to serve as a template that you can modify to establish your very own digital lab notebook!

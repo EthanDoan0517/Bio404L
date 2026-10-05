@@ -1,26 +1,38 @@
 ---
 title: "Week of August 31, 2026"
-author: "Your Name"
+author: "Ethan Doan"
 date: 2026-08-31
-projects:
+projects: "guided-learning"
 ---
 
 ## Goals for the week
 
 - [ ] Learn to use the digital notebook
-- [ ] Set up GitHub repository and notebook website
+- [x] Set up GitHub repository and notebook website
 - [ ] Access William & Mary's HPC
 - [ ] Make the first container on the HPC
 - [ ] Install some software into that container
 
 ## Monday
 
+No dated activity entry was recorded for this day.
+
 ## Tuesday
+
+No dated activity entry was recorded for this day.
 - [ ] Learn more about bioinformatics!
 
 ## Wednesday
 
+No dated activity entry was recorded for this day.
+
 ## Thursday
+
+No dated activity entry was recorded for this day.
 - [ ] Think extra deeply about bioinformatics
 
 ## Friday
+
+No dated activity entry was recorded for this day.
+
+Current verification is recorded separately in the [October 5 completion audit](lab-completion-audit.qmd). This weekly page does not establish when the HPC tasks were completed.

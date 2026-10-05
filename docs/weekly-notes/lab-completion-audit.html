@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Ethan Doan">
+<meta name="dcterms.date" content="2026-10-05">
 
-<title>How to create new projects – Ethan Doan’s Lab Notebook</title>
+<title>Four guided labs: completion audit – Ethan Doan’s Lab Notebook</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -22,41 +24,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -161,22 +128,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#scope-and-evidence" id="toc-scope-and-evidence" class="nav-link active" data-scroll-target="#scope-and-evidence">Scope and evidence</a></li>
+  <li><a href="#sample-products-found-locally" id="toc-sample-products-found-locally" class="nav-link" data-scroll-target="#sample-products-found-locally">Sample products found locally</a></li>
+  <li><a href="#panama-processing-problems-identified" id="toc-panama-processing-problems-identified" class="nav-link" data-scroll-target="#panama-processing-problems-identified">Panama processing problems identified</a></li>
+  <li><a href="#hpc-completion-criteria" id="toc-hpc-completion-criteria" class="nav-link" data-scroll-target="#hpc-completion-criteria">HPC completion criteria</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">How to create new projects</h1>
+<h1 class="title">Four guided labs: completion audit</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Ethan Doan </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 5, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -186,19 +174,156 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>The function <code>qurtoutils::make_project(projectname = "...")</code> simplifies the process of creating a new project subdirectory. A new directory is created under the <code>projects/</code> directory, using the name specified in the argument <code>projectname</code>.</p>
-<p>The project has the following directory structure:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>fs<span class="sc">::</span><span class="fu">dir_tree</span>(<span class="st">"Semester-Project"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Semester-Project
-+-- idea-note1.qmd
-\-- index.qmd</code></pre>
-</div>
-</div>
-<p>The <code>index.qmd</code> file for the project will automatically search for weekly meeting notes and reading notes that have the same <code>projects</code> tag as the name for the newly made project.</p>
+<section id="scope-and-evidence" class="level2">
+<h2 class="anchored" data-anchor-id="scope-and-evidence">Scope and evidence</h2>
+<p>This audit covers the four guided-lab pages currently in the notebook. It is a retrospective check of saved files, not a claim that every lab was completed. Local QC reports and Salmon outputs were checked on October 5, 2026. HPC authentication failed during this check, so the current remote files, environments, scripts, and jobs remain unverified.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Guided lab</th>
+<th>Evidence and remaining work</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Working with GitHub</td>
+<td>Repository and rendered notebook exist. Personal details and notes have been updated; publication is checked separately.</td>
+</tr>
+<tr class="even">
+<td>Accessing W&amp;M’s HPC</td>
+<td>Existing local analysis outputs support prior processing, but current HPC access, the <code>sra_prep</code> and <code>txpt_quant</code> environments, installed tools, and SLURM scripts need remote verification.</td>
+</tr>
+<tr class="odd">
+<td>Working with SRA Data</td>
+<td>Six Maine QC reports retain reads. Two Panama reports retain zero reads; four Panama reports were not found locally. Check remote results and diagnose unsuccessful runs.</td>
+</tr>
+<tr class="even">
+<td>Transcript Quantification</td>
+<td>Six Maine <code>quant.sf</code> tables pass local structural/numerical checks. Six Panama tables were not found locally. All 12 successful sample outputs are needed to establish completion.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="sample-products-found-locally" class="level2">
+<h2 class="anchored" data-anchor-id="sample-products-found-locally">Sample products found locally</h2>
+<p>QC reports were read from <code>Documents/W&amp;M Junior Year/Lab</code>; quantification files were read from <code>Desktop/Guided_DGE_Analysis/quant_data</code>. Missing locally does not prove missing on the HPC.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Sample</th>
+<th>SRA accession</th>
+<th>Reads retained in local QC report</th>
+<th>Local Salmon result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Dmel_Maine_21C_Rep1</td>
+<td>SRR1576457</td>
+<td>46.090714 M</td>
+<td>Valid; 90.35% mapped</td>
+</tr>
+<tr class="even">
+<td>Dmel_Maine_21C_Rep2</td>
+<td>SRR1576458</td>
+<td>35.507118 M</td>
+<td>Valid; 89.91% mapped</td>
+</tr>
+<tr class="odd">
+<td>Dmel_Maine_21C_Rep3</td>
+<td>SRR1576459</td>
+<td>48.257202 M</td>
+<td>Valid; 88.98% mapped</td>
+</tr>
+<tr class="even">
+<td>Dmel_Maine_29C_Rep1</td>
+<td>SRR1576460</td>
+<td>45.324140 M</td>
+<td>Valid; 91.38% mapped</td>
+</tr>
+<tr class="odd">
+<td>Dmel_Maine_29C_Rep2</td>
+<td>SRR1576461</td>
+<td>43.892302 M</td>
+<td>Valid; 89.52% mapped</td>
+</tr>
+<tr class="even">
+<td>Dmel_Maine_29C_Rep3</td>
+<td>SRR1576462</td>
+<td>48.323142 M</td>
+<td>Valid; 90.40% mapped</td>
+</tr>
+<tr class="odd">
+<td>Dmel_Panama_21C_Rep1</td>
+<td>SRR1576463</td>
+<td>No local report</td>
+<td>Not found locally</td>
+</tr>
+<tr class="even">
+<td>Dmel_Panama_21C_Rep2</td>
+<td>SRR1576464</td>
+<td>No local report</td>
+<td>Not found locally</td>
+</tr>
+<tr class="odd">
+<td>Dmel_Panama_21C_Rep3</td>
+<td>SRR1576465</td>
+<td>No local report</td>
+<td>Not found locally</td>
+</tr>
+<tr class="even">
+<td>Dmel_Panama_29C_Rep1</td>
+<td>SRR1576514</td>
+<td>0</td>
+<td>Not found locally</td>
+</tr>
+<tr class="odd">
+<td>Dmel_Panama_29C_Rep2</td>
+<td>SRR1576515</td>
+<td>0</td>
+<td>Not found locally</td>
+</tr>
+<tr class="even">
+<td>Dmel_Panama_29C_Rep3</td>
+<td>SRR1576516</td>
+<td>No local report</td>
+<td>Not found locally</td>
+</tr>
+</tbody>
+</table>
+<p>Each of the six valid Maine tables contains 29,926 transcripts, nonnegative finite TPM/count values, and TPMs summing to approximately one million. Their Salmon metadata report completed processing without quantification errors. The run timestamps are September 21, 2026. These checks establish valid saved outputs, not the biological interpretation of the experiment.</p>
+<p>The local DGE project contains <code>quant_data</code>, <code>metadata</code>, and <code>results</code> directories and a metadata CSV.</p>
+</section>
+<section id="panama-processing-problems-identified" class="level2">
+<h2 class="anchored" data-anchor-id="panama-processing-problems-identified">Panama processing problems identified</h2>
+<p>The saved <code>Dmel_Panama_29C_Rep1.html</code> report names input accession <code>SRR1576466</code>; the metadata requires <code>SRR1576514</code>. The Rep2 report names <code>SRR1576467</code>; the metadata requires <code>SRR1576515</code>. Thus, those filenames do not establish that the required samples were processed.</p>
+<p>Both reports show mean input read lengths of 76 bases and a command using <code>fastp -l 80</code>. More than 99.8% of reads were rejected as too short, with zero reads retained. Before rerunning, verify the correct accessions and their read lengths against the course metadata. Changing the length cutoff alone would not resolve the sample mismatch.</p>
+</section>
+<section id="hpc-completion-criteria" class="level2">
+<h2 class="anchored" data-anchor-id="hpc-completion-criteria">HPC completion criteria</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">Authenticate as <code>etdoan</code> and inspect <code>~/scr10/Biol404L</code>.</label></li>
+<li><label><input type="checkbox">Verify <code>sra_prep</code> has the required SRA tools, <code>parallel-fastq-dump</code>, <code>fastp</code>, and NCBI datasets CLI.</label></li>
+<li><label><input type="checkbox">Verify <code>txpt_quant</code> has Salmon and STAR.</label></li>
+<li><label><input type="checkbox">Inspect the download, unpacking, trimming, indexing, and quantification scripts and job logs.</label></li>
+<li><label><input type="checkbox">Verify usable trimmed read pairs and QC reports for all 12 accessions; investigate zero-retained-read Panama reports before changing any thresholds.</label></li>
+<li><label><input type="checkbox">Verify the Salmon index and all 12 successful quantification directories on the HPC.</label></li>
+<li><label><input type="checkbox">Compare saved local products with HPC products and copy any genuinely missing completed outputs.</label></li>
+</ul>
+<p>Expected remote locations are <code>~/scr10/Biol404L/raw_read_prep</code>, <code>~/scr10/Biol404L/transcript_quantification/Salmon_Quant</code>, and <code>~/scr10/Biol404L/Slurm_Scripts</code>; these are notebook conventions and still require live verification.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -1,9 +1,7 @@
 ---
-title: 'Demo paper title'
-author: Demo Author
-year: 2020
-projects: project-1
+title: "Reading notes — awaiting paper selection"
+author: "Ethan Doan"
+projects: Semester-Project
 ---
 
-{{< lipsum 1 >}}
-
+No paper-specific reading notes have been recorded. Add the selected paper's citation, research question, methods, main results, and relevance to the semester project after reading it.

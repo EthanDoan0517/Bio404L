@@ -1,6 +1,6 @@
 ---
 title: "Working with SRA Data"
-author: "YOUR-NAME"
+author: "Ethan Doan"
 date: 2026-09-09
 projects: "guided-learning"
 keywords:
@@ -14,7 +14,7 @@ keywords:
 # Goals of the lab overall
 
 The skills acquired in this lab class are crucial for bioinformatic tasks using molecular data, such as data analysis, scripting,
-and working in high-performance computing (HPC) environments. My hope is that you don’t just type the commands into the terminal and
+and working in high-performance computing (HPC) environments. My hope is that you donâ€™t just type the commands into the terminal and
 move on -- I would like you to ***think*** about what these commands are doing and start imagining how they could be useful in analyzing your own data.
 
 ## For your success in the lab
@@ -64,7 +64,7 @@ your notes as needed!
 
 1. Download your empty lab reposity from GitHub (only need to do this the first day)
    ```bash
-   ssh wm-username@bora.sciclone.wm.edu
+   ssh etdoan@bora.sciclone.wm.edu
    ```
 
 2. Move into your lab folder (this should be in the `scr10` directory)
@@ -443,4 +443,6 @@ and the output names to save them.
     rm -ri SRR1576457 Dmel_Maine_21C_Rep1
     ```
 
-Make a small reference guide of steps for yourself down here!
+My processing order is `prefetch` → `parallel-fastq-dump` → `fastp` → inspect the QC report → Salmon quantification. Match every accession to `DGE.Drosophila.Metadata.csv`. A finished job alone is insufficient: check nonempty paired outputs, retained-read counts, and logs before removing intermediates.
+
+The current per-sample results and unresolved Panama runs are recorded in the [completion audit](../weekly-notes/lab-completion-audit.qmd).

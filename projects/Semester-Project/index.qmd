@@ -26,10 +26,7 @@ listing:
 
 ## About this project
 
-Briefly describe which dataset and big bioinformatic tasks that best describe the project!
-
-This is up to you to fill out when you are ready. It should also be updated as often
-as needed as the scope changes!
+A semester-project dataset and research question have not yet been recorded. The guided labs use *Drosophila melanogaster* RNA-seq samples from Maine and Panama at 21°C and 29°C, but that course dataset does not establish a semester-project choice.
 
 
 ## Concept notes and other ideas
