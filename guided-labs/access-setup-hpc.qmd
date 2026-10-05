@@ -37,9 +37,9 @@ Throughout the labs, you will gain hands-on experience with essential *bash* com
 I strongly suggest asking questions today while the exercise is fresh in your mind (and while your classmates are around to help you!).
 
 ### Accessing the HPC at William & Mary
-- [ ] Access William & Mary's HPC
-- [ ] Make the first container on the HPC
-- [ ] Install some software into that container
+- [x] Access William & Mary's HPC
+- [x] Make the first container on the HPC
+- [x] Install some software into that container
 
 ## Before we get started
 All of the labs for this course will be in QuartoMD format like this. You will be required to copy
@@ -343,9 +343,9 @@ In it we will install several pieces of software:
    ```
 10. Once this is finished, you will need to make one more container! Updating the
 `prep_conda_env.sh` script, you will need to:
-   - [ ] create a new container called `txpt_quant`
-   - [ ] install `salmon`
-   - [ ] install `star`
+   - [x] create a new container called `txpt_quant`
+   - [x] install `salmon`
+   - [x] install `star`
 
    Make sure this is run before we meet next!
 
@@ -408,3 +408,6 @@ Below, the steps are numbered with emtpy code blocks below them. Copy-paste your
    module load miniforge3/24.9.2-0
    conda activate sra_prep
    ```
+
+
+Completion verified on October 5, 2026; see the [HPC product audit](../weekly-notes/lab-completion-audit.qmd). Checkmarks record current verified completion, not the date each task originally occurred.

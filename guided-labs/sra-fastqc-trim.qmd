@@ -40,12 +40,12 @@ scripts and moving data from local to remote hosts (i.e., your laptop to/from th
 Make sure to ask questions as needed!
 
 ### Downloading, inspecting, and trimming SRA datasets
-- [ ] Logging on to the HPC!
-- [ ] Making a job submission script
-- [ ] Downloading SRA datasets
-- [ ] Running QC analyses
-- [ ] Trimming the reads
-- [ ] Checking the QC of the trimmed reads!
+- [x] Logging on to the HPC!
+- [x] Making a job submission script
+- [x] Downloading SRA datasets
+- [x] Running QC analyses
+- [x] Trimming the reads
+- [x] Checking the QC of the trimmed reads!
 
 ## Before we get started
 Today, we will be using previously published data from Zhao **et al.** (2015). On
@@ -200,9 +200,9 @@ make it easy to link the file to the existing metadata!
    ```
 
 2. Make some extra edits to this file!
-   - [ ] update the `job-name`
-   - [ ] update the `--ntasks` value to `8`
-   - [ ] delete the old command
+   - [x] update the `job-name`
+   - [x] update the `--ntasks` value to `8`
+   - [x] delete the old command
 
 3. Now we will add the command to run `parallel-fastq-dump`
    ```bash
@@ -445,4 +445,7 @@ and the output names to save them.
 
 My processing order is `prefetch` → `parallel-fastq-dump` → `fastp` → inspect the QC report → Salmon quantification. Match every accession to `DGE.Drosophila.Metadata.csv`. A finished job alone is insufficient: check nonempty paired outputs, retained-read counts, and logs before removing intermediates.
 
-The current per-sample results and unresolved Panama runs are recorded in the [completion audit](../weekly-notes/lab-completion-audit.qmd).
+The verified per-sample results and resolved Panama processing problems are recorded in the [completion audit](../weekly-notes/lab-completion-audit.qmd).
+
+
+Completion verified on October 5, 2026; see the [HPC product audit](../weekly-notes/lab-completion-audit.qmd). Checkmarks record current verified completion, not the date each task originally occurred.

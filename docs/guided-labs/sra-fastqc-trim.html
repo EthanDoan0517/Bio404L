@@ -250,12 +250,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="downloading-inspecting-and-trimming-sra-datasets" class="level3">
 <h3 class="anchored" data-anchor-id="downloading-inspecting-and-trimming-sra-datasets">Downloading, inspecting, and trimming SRA datasets</h3>
 <ul class="task-list">
-<li><label><input type="checkbox">Logging on to the HPC!</label></li>
-<li><label><input type="checkbox">Making a job submission script</label></li>
-<li><label><input type="checkbox">Downloading SRA datasets</label></li>
-<li><label><input type="checkbox">Running QC analyses</label></li>
-<li><label><input type="checkbox">Trimming the reads</label></li>
-<li><label><input type="checkbox">Checking the QC of the trimmed reads!</label></li>
+<li><label><input type="checkbox" checked="">Logging on to the HPC!</label></li>
+<li><label><input type="checkbox" checked="">Making a job submission script</label></li>
+<li><label><input type="checkbox" checked="">Downloading SRA datasets</label></li>
+<li><label><input type="checkbox" checked="">Running QC analyses</label></li>
+<li><label><input type="checkbox" checked="">Trimming the reads</label></li>
+<li><label><input type="checkbox" checked="">Checking the QC of the trimmed reads!</label></li>
 </ul>
 </section>
 <section id="before-we-get-started" class="level2">
@@ -429,9 +429,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> ../Slurm_Scripts/prep_conda_env.sh ../Slurm_Scripts/sra_fastq_dump.sh</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>Make some extra edits to this file!</p>
 <ul class="task-list">
-<li><label><input type="checkbox">update the <code>job-name</code></label></li>
-<li><label><input type="checkbox">update the <code>--ntasks</code> value to <code>8</code></label></li>
-<li><label><input type="checkbox">delete the old command</label></li>
+<li><label><input type="checkbox" checked="">update the <code>job-name</code></label></li>
+<li><label><input type="checkbox" checked="">update the <code>--ntasks</code> value to <code>8</code></label></li>
+<li><label><input type="checkbox" checked="">delete the old command</label></li>
 </ul></li>
 <li><p>Now we will add the command to run <code>parallel-fastq-dump</code></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">parallel-fastq-dump</span> <span class="at">--split-files</span> <span class="dt">\</span></span>
@@ -611,7 +611,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-ri</span> SRR1576457 Dmel_Maine_21C_Rep1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ol>
 <p>My processing order is <code>prefetch</code> → <code>parallel-fastq-dump</code> → <code>fastp</code> → inspect the QC report → Salmon quantification. Match every accession to <code>DGE.Drosophila.Metadata.csv</code>. A finished job alone is insufficient: check nonempty paired outputs, retained-read counts, and logs before removing intermediates.</p>
-<p>The current per-sample results and unresolved Panama runs are recorded in the <a href="../weekly-notes/lab-completion-audit.html">completion audit</a>.</p>
+<p>The verified per-sample results and resolved Panama processing problems are recorded in the <a href="../weekly-notes/lab-completion-audit.html">completion audit</a>.</p>
+<p>Completion verified on October 5, 2026; see the <a href="../weekly-notes/lab-completion-audit.html">HPC product audit</a>. Checkmarks record current verified completion, not the date each task originally occurred.</p>
 
 
 </section>

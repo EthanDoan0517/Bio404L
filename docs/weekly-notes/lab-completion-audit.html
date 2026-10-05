@@ -9,7 +9,7 @@
 <meta name="author" content="Ethan Doan">
 <meta name="dcterms.date" content="2026-10-05">
 
-<title>Four guided labs: completion audit – Ethan Doan’s Lab Notebook</title>
+<title>Four guided labs: verified completion – Ethan Doan’s Lab Notebook</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -133,10 +133,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#scope-and-evidence" id="toc-scope-and-evidence" class="nav-link active" data-scroll-target="#scope-and-evidence">Scope and evidence</a></li>
-  <li><a href="#sample-products-found-locally" id="toc-sample-products-found-locally" class="nav-link" data-scroll-target="#sample-products-found-locally">Sample products found locally</a></li>
-  <li><a href="#panama-processing-problems-identified" id="toc-panama-processing-problems-identified" class="nav-link" data-scroll-target="#panama-processing-problems-identified">Panama processing problems identified</a></li>
-  <li><a href="#hpc-completion-criteria" id="toc-hpc-completion-criteria" class="nav-link" data-scroll-target="#hpc-completion-criteria">HPC completion criteria</a></li>
+  <li><a href="#verified-completion" id="toc-verified-completion" class="nav-link active" data-scroll-target="#verified-completion">Verified completion</a></li>
+  <li><a href="#verified-sample-outputs" id="toc-verified-sample-outputs" class="nav-link" data-scroll-target="#verified-sample-outputs">Verified sample outputs</a></li>
+  <li><a href="#where-completed-products-are-stored" id="toc-where-completed-products-are-stored" class="nav-link" data-scroll-target="#where-completed-products-are-stored">Where completed products are stored</a></li>
+  <li><a href="#resolved-panama-discrepancy" id="toc-resolved-panama-discrepancy" class="nav-link" data-scroll-target="#resolved-panama-discrepancy">Resolved Panama discrepancy</a></li>
   </ul>
 </nav>
     </div>
@@ -145,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Four guided labs: completion audit</h1>
+<h1 class="title">Four guided labs: verified completion</h1>
 </div>
 
 
@@ -174,9 +174,9 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="scope-and-evidence" class="level2">
-<h2 class="anchored" data-anchor-id="scope-and-evidence">Scope and evidence</h2>
-<p>This audit covers the four guided-lab pages currently in the notebook. It is a retrospective check of saved files, not a claim that every lab was completed. Local QC reports and Salmon outputs were checked on October 5, 2026. HPC authentication failed during this check, so the current remote files, environments, scripts, and jobs remain unverified.</p>
+<section id="verified-completion" class="level2">
+<h2 class="anchored" data-anchor-id="verified-completion">Verified completion</h2>
+<p>All four guided labs have supporting products. On October 5, 2026, the HPC was accessed as <code>etdoan</code> and all 12 required samples were verified. The six Maine quantifications were completed September 21; the six Panama samples were successfully reprocessed September 29 under SLURM job array <code>536782</code>, with every task <code>COMPLETED</code> and exit code <code>0:0</code>.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -184,143 +184,125 @@ ul.task-list li input[type="checkbox"] {
 </colgroup>
 <thead>
 <tr class="header">
-<th>Guided lab</th>
-<th>Evidence and remaining work</th>
+<th>Lab</th>
+<th>Verified evidence</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Working with GitHub</td>
-<td>Repository and rendered notebook exist. Personal details and notes have been updated; publication is checked separately.</td>
+<td>Personalized Quarto source, rendered website, new audit entry, and published GitHub repository.</td>
 </tr>
 <tr class="even">
 <td>Accessing W&amp;M’s HPC</td>
-<td>Existing local analysis outputs support prior processing, but current HPC access, the <code>sra_prep</code> and <code>txpt_quant</code> environments, installed tools, and SLURM scripts need remote verification.</td>
+<td>Successful SSH access; <code>sra_prep</code> and <code>txpt_quant</code> environments and required tools installed.</td>
 </tr>
 <tr class="odd">
 <td>Working with SRA Data</td>
-<td>Six Maine QC reports retain reads. Two Panama reports retain zero reads; four Panama reports were not found locally. Check remote results and diagnose unsuccessful runs.</td>
+<td>Twelve sample-specific QC reports and nonempty trimmed read pairs. The six corrected Panama reports match the course accessions and retain reads.</td>
 </tr>
 <tr class="even">
 <td>Transcript Quantification</td>
-<td>Six Maine <code>quant.sf</code> tables pass local structural/numerical checks. Six Panama tables were not found locally. All 12 successful sample outputs are needed to establish completion.</td>
+<td>Salmon index and twelve valid <code>quant.sf</code> tables on HPC. All twelve local tables match the remote SHA-256 checksums. Local DGE project contains <code>quant_data</code>, <code>metadata</code>, and <code>results</code>.</td>
 </tr>
 </tbody>
 </table>
+<p>Installed versions: fastp 1.3.6, SRA Tools 3.4.1, parallel-fastq-dump 0.6.7, NCBI datasets CLI 18.37.0, Salmon 2.7.0, and STAR 2.7.11b.</p>
 </section>
-<section id="sample-products-found-locally" class="level2">
-<h2 class="anchored" data-anchor-id="sample-products-found-locally">Sample products found locally</h2>
-<p>QC reports were read from <code>Documents/W&amp;M Junior Year/Lab</code>; quantification files were read from <code>Desktop/Guided_DGE_Analysis/quant_data</code>. Missing locally does not prove missing on the HPC.</p>
+<section id="verified-sample-outputs" class="level2">
+<h2 class="anchored" data-anchor-id="verified-sample-outputs">Verified sample outputs</h2>
+<p>Every quantification table has 29,926 unique transcripts, finite nonnegative TPMs and counts, and TPMs summing to approximately one million. Salmon reports completed metadata, no quantification errors, and mapped reads. These are processing and output checks; differential expression analysis is a later task.</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Sample</th>
-<th>SRA accession</th>
-<th>Reads retained in local QC report</th>
-<th>Local Salmon result</th>
+<th>Required accession</th>
+<th>Mapping rate</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Dmel_Maine_21C_Rep1</td>
 <td>SRR1576457</td>
-<td>46.090714 M</td>
-<td>Valid; 90.35% mapped</td>
+<td>90.35%</td>
 </tr>
 <tr class="even">
 <td>Dmel_Maine_21C_Rep2</td>
 <td>SRR1576458</td>
-<td>35.507118 M</td>
-<td>Valid; 89.91% mapped</td>
+<td>89.91%</td>
 </tr>
 <tr class="odd">
 <td>Dmel_Maine_21C_Rep3</td>
 <td>SRR1576459</td>
-<td>48.257202 M</td>
-<td>Valid; 88.98% mapped</td>
+<td>88.98%</td>
 </tr>
 <tr class="even">
 <td>Dmel_Maine_29C_Rep1</td>
 <td>SRR1576460</td>
-<td>45.324140 M</td>
-<td>Valid; 91.38% mapped</td>
+<td>91.38%</td>
 </tr>
 <tr class="odd">
 <td>Dmel_Maine_29C_Rep2</td>
 <td>SRR1576461</td>
-<td>43.892302 M</td>
-<td>Valid; 89.52% mapped</td>
+<td>89.52%</td>
 </tr>
 <tr class="even">
 <td>Dmel_Maine_29C_Rep3</td>
 <td>SRR1576462</td>
-<td>48.323142 M</td>
-<td>Valid; 90.40% mapped</td>
+<td>90.40%</td>
 </tr>
 <tr class="odd">
 <td>Dmel_Panama_21C_Rep1</td>
 <td>SRR1576463</td>
-<td>No local report</td>
-<td>Not found locally</td>
+<td>89.78%</td>
 </tr>
 <tr class="even">
 <td>Dmel_Panama_21C_Rep2</td>
 <td>SRR1576464</td>
-<td>No local report</td>
-<td>Not found locally</td>
+<td>86.05%</td>
 </tr>
 <tr class="odd">
 <td>Dmel_Panama_21C_Rep3</td>
 <td>SRR1576465</td>
-<td>No local report</td>
-<td>Not found locally</td>
+<td>87.95%</td>
 </tr>
 <tr class="even">
 <td>Dmel_Panama_29C_Rep1</td>
 <td>SRR1576514</td>
-<td>0</td>
-<td>Not found locally</td>
+<td>89.23%</td>
 </tr>
 <tr class="odd">
 <td>Dmel_Panama_29C_Rep2</td>
 <td>SRR1576515</td>
-<td>0</td>
-<td>Not found locally</td>
+<td>89.85%</td>
 </tr>
 <tr class="even">
 <td>Dmel_Panama_29C_Rep3</td>
 <td>SRR1576516</td>
-<td>No local report</td>
-<td>Not found locally</td>
+<td>91.03%</td>
 </tr>
 </tbody>
 </table>
-<p>Each of the six valid Maine tables contains 29,926 transcripts, nonnegative finite TPM/count values, and TPMs summing to approximately one million. Their Salmon metadata report completed processing without quantification errors. The run timestamps are September 21, 2026. These checks establish valid saved outputs, not the biological interpretation of the experiment.</p>
-<p>The local DGE project contains <code>quant_data</code>, <code>metadata</code>, and <code>results</code> directories and a metadata CSV.</p>
 </section>
-<section id="panama-processing-problems-identified" class="level2">
-<h2 class="anchored" data-anchor-id="panama-processing-problems-identified">Panama processing problems identified</h2>
-<p>The saved <code>Dmel_Panama_29C_Rep1.html</code> report names input accession <code>SRR1576466</code>; the metadata requires <code>SRR1576514</code>. The Rep2 report names <code>SRR1576467</code>; the metadata requires <code>SRR1576515</code>. Thus, those filenames do not establish that the required samples were processed.</p>
-<p>Both reports show mean input read lengths of 76 bases and a command using <code>fastp -l 80</code>. More than 99.8% of reads were rejected as too short, with zero reads retained. Before rerunning, verify the correct accessions and their read lengths against the course metadata. Changing the length cutoff alone would not resolve the sample mismatch.</p>
-</section>
-<section id="hpc-completion-criteria" class="level2">
-<h2 class="anchored" data-anchor-id="hpc-completion-criteria">HPC completion criteria</h2>
-<ul class="task-list">
-<li><label><input type="checkbox">Authenticate as <code>etdoan</code> and inspect <code>~/scr10/Biol404L</code>.</label></li>
-<li><label><input type="checkbox">Verify <code>sra_prep</code> has the required SRA tools, <code>parallel-fastq-dump</code>, <code>fastp</code>, and NCBI datasets CLI.</label></li>
-<li><label><input type="checkbox">Verify <code>txpt_quant</code> has Salmon and STAR.</label></li>
-<li><label><input type="checkbox">Inspect the download, unpacking, trimming, indexing, and quantification scripts and job logs.</label></li>
-<li><label><input type="checkbox">Verify usable trimmed read pairs and QC reports for all 12 accessions; investigate zero-retained-read Panama reports before changing any thresholds.</label></li>
-<li><label><input type="checkbox">Verify the Salmon index and all 12 successful quantification directories on the HPC.</label></li>
-<li><label><input type="checkbox">Compare saved local products with HPC products and copy any genuinely missing completed outputs.</label></li>
+<section id="where-completed-products-are-stored" class="level2">
+<h2 class="anchored" data-anchor-id="where-completed-products-are-stored">Where completed products are stored</h2>
+<p>On <code>bora.sciclone.wm.edu</code>:</p>
+<ul>
+<li><code>~/scr10/Biol404L/raw_read_prep/</code>: all twelve pairs of trimmed FASTQ files and twelve QC HTML reports.</li>
+<li><code>~/scr10/Biol404L/transcript_quantification/Salmon_Quant/</code>: all twelve quantification directories.</li>
+<li><code>~/scr10/Biol404L/transcript_quantification/dmel_index/</code>: shared Salmon index.</li>
+<li><code>~/scr10/Biol404L/recovery-2026-09-29/</code>: original corrected Panama products, QC JSON, successful logs, and recovery script. Standard folders link to these verified products.</li>
+<li><code>~/scr10/Biol404L/Slurm_Scripts/repair_panama_verified.sh</code>: copy of the successful recovery script. Older scripts are historical and may contain incorrect Panama accession numbers; use the metadata and verified recovery script as references.</li>
+<li><code>~/scr10/Biol404L/hpc-lab-audit-20261005.json</code>: verification record with paths and quantification checksums.</li>
+<li><code>~/scr10/Biol404L/notebook-2026-10-05/</code>: saved notebook source and rendered site snapshot.</li>
 </ul>
-<p>Expected remote locations are <code>~/scr10/Biol404L/raw_read_prep</code>, <code>~/scr10/Biol404L/transcript_quantification/Salmon_Quant</code>, and <code>~/scr10/Biol404L/Slurm_Scripts</code>; these are notebook conventions and still require live verification.</p>
+<p>All twelve quantification directories are also available locally in <code>Desktop/Guided_DGE_Analysis/quant_data</code>.</p>
+</section>
+<section id="resolved-panama-discrepancy" class="level2">
+<h2 class="anchored" data-anchor-id="resolved-panama-discrepancy">Resolved Panama discrepancy</h2>
+<p>The first local-only audit could find six Maine results, but could not authenticate to HPC. That limitation is now resolved. The September 29 recovery outputs already existed remotely and passed verification; rerunning those completed analyses was unnecessary.</p>
+<p>Two obsolete Panama 29°C reports used <code>SRR1576466</code> and <code>SRR1576467</code> instead of metadata accessions <code>SRR1576514</code> and <code>SRR1576515</code>. Their 76-base reads were incompatible with the 80-base cutoff and yielded zero retained reads. The corrected recovery used all six required Panama accessions and retained reads with the course’s original filtering parameters. Four obsolete trimmed files in <code>raw_read_prep</code> were preserved with <code>.superseded-20261005</code> suffixes before the corrected products were linked into place.</p>
+<p>Historical daily notes, personal reflections, and the semester-project choice cannot be reconstructed from analysis files and remain explicitly identified as unrecorded elsewhere in the notebook.</p>
 
 
 </section>

@@ -53,11 +53,11 @@ GitHub Checklist:
 - [x] Make a GitHub Repository
 - [x] Set-up the lab notebook
 - [x] Save the notebook online as a website!
-- [ ] Update the lab notebook!
-- [ ] Make a new post!
-- [ ] "Push" the changes
-- [ ] Be patient (worst check list option)
-- [ ] View your changes online!
+- [x] Update the lab notebook!
+- [x] Make a new post!
+- [x] "Push" the changes
+- [x] Be patient (worst check list option)
+- [x] View your changes online!
 
 ## Setting up and managing your GitHub!
 
@@ -143,3 +143,6 @@ git push origin main
 ```
 
 Review the changes before committing. Open the published page after deployment to check the result.
+
+
+Completion verified on October 5, 2026; see the [HPC product audit](../weekly-notes/lab-completion-audit.qmd). Checkmarks record current verified completion, not the date each task originally occurred.

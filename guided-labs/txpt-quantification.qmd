@@ -47,11 +47,11 @@ powerful, as it really is **practice, practice, practice**!
 Make sure to ask questions as needed!
 
 ### Moving files, `Salmon`, Transcript Abundance!
-- [ ] Logging on to the HPC!
-- [ ] Uploading files to the HPC
-- [ ] Quantifying transcript abundance
-- [ ] Downloading the resulting table(s)!
-- [ ] Setting up for Differential Gene Expression
+- [x] Logging on to the HPC!
+- [x] Uploading files to the HPC
+- [x] Quantifying transcript abundance
+- [x] Downloading the resulting table(s)!
+- [x] Setting up for Differential Gene Expression
 
 ---
 
@@ -394,3 +394,6 @@ folder on the HPC
    ```bash
    scp -r "etdoan@bora.sciclone.wm.edu:~/scr10/Biol404L/transcript_quantification/Salmon_Quant/Dmel*" .
    ```
+
+
+Completion verified on October 5, 2026; see the [HPC product audit](../weekly-notes/lab-completion-audit.qmd). Checkmarks record current verified completion, not the date each task originally occurred.
